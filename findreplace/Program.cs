@@ -27,7 +27,7 @@ namespace findreplace
         fileContents = fileContents.Replace(args[i], args[i + 1]);
       }
 
-      Console.Write(fileContents);
+      File.WriteAllText(args[args.Length - 1], fileContents, Encoding.UTF8);
     }
 
     #endregion Metody
